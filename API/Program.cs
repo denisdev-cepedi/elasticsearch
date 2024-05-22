@@ -45,7 +45,7 @@ static ElasticsearchSinkOptions ConfigureElasticSink(IConfiguration configuratio
     return new ElasticsearchSinkOptions(new Uri(configuration["ElasticConfiguration:Uri"]))
     {
         AutoRegisterTemplate = true,
-        IndexFormat = $"WebAPI{environment?.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}"
+        IndexFormat = $"MudarONome{environment?.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}"
         //IndexFormat = $"{Assembly.GetExecutingAssembly().GetName().Name.ToLower().Replace(".", "-")}-{environment?.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}"
     };
 }
